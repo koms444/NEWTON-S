@@ -31,11 +31,11 @@ function setup() {
 	bob4= new bob(startBobPositionX+bobDiameter,startBobPositionY,bobDiameter)
 	bob5=new bob(startBobPositionX+bobDiameter*2,startBobPositionY,bobDiameter)
 	
-	chain1=new Chain(bob1.body,ground.body-bobDiameter*2,0)
-	chain2=new Chain(bob2.body,ground.body-bobDiameter,0)
-	chain3 =new Chain(bob1.body,ground.body,0)
-	chain4=new Chain(bob1.body,ground.body+bobDiameter,0)
-	chain5=new Chain(bob1.body,ground.body+bobDiameter*2,0)
+	chain1=new Chain(bob1.body,ground.body,-bobDiameter*2,0)
+	chain2=new Chain(bob2.body,ground.body,-bobDiameter,0)
+	chain3 =new Chain(bob3.body,ground.body,0,0)
+	chain4=new Chain(bob4.body,ground.body,+bobDiameter,0)
+	chain5=new Chain(bob5.body,ground.body,+bobDiameter*2,0)
 	Engine.run(engine);
   
 }
@@ -44,13 +44,18 @@ function setup() {
 function draw() {
   rectMode(CENTER);
   background(255);
-  chain1.display();
+  ground.display();
   bob1.display();
   bob2.display();
   bob3.display();
   bob4.display();
   bob5.display();
-  ground.display();
+  
+  chain1.display();
+  chain2.display();
+  chain3.display();
+  chain4.display();
+  chain5.display();
   drawSprites();
  
 }

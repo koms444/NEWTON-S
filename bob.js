@@ -33,7 +33,7 @@ class bob {
      ellipseMode(CENTER)
     strokeWeight(3);
     fill("pink")
-        ellipse(0,0,60)
+        ellipse(0,0,this.r,this.r)
     
     pop()
     }
